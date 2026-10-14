@@ -1,0 +1,18 @@
+# Render Blueprint. Auto-deploy is OFF because GitHub Actions triggers deploys
+# (via a deploy hook) only after the test job passes.
+services:
+  - type: web
+    name: notebooklm-clone
+    runtime: docker
+    plan: free              # if the free 512 MB instance runs out of memory, switch to "starter"
+    autoDeploy: false
+    healthCheckPath: /
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false          # set in the Render dashboard (secret)
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+      - key: STORAGE_BACKEND
+        value: firestore
+      - key: GOOGLE_CREDENTIALS_JSON
+        sync: false          # set in the Render dashboard (secret)

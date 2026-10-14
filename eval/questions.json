@@ -1,0 +1,10 @@
+[
+  {"q": "How do I add an item to the end of a list and remove an item by its index?", "keywords": ["append", "pop"]},
+  {"q": "What is a tuple and can it be modified after creation?", "keywords": ["tuple", "immutable"]},
+  {"q": "How does exception handling work with try, except and finally?", "keywords": ["try", "except", "finally"]},
+  {"q": "What does the enumerate function do?", "keywords": ["enumerate", "counter"]},
+  {"q": "How is a factorial function written using recursion?", "keywords": ["factorial", "recursion"]},
+  {"q": "How does inheritance work and what does super() do?", "keywords": ["inheritance", "super"]},
+  {"q": "What is a lambda function in Python?", "keywords": ["lambda"]},
+  {"q": "What are decorators in Python?", "keywords": ["decorator"]}
+]

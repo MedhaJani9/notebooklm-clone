@@ -1,0 +1,16 @@
+# secrets
+.env
+*.json.key
+service-account*.json
+# local data / caches
+data/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.fastembed_cache/
+.DS_Store
+firebase-key.json
+*-firebase-adminsdk-*.json
+render-credentials.txt

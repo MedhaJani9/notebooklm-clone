@@ -1,0 +1,722 @@
+[
+  {
+    "q": "How do I add an item to the end of a list and remove an item by its index?",
+    "mode": "vector",
+    "retrieval_ms": 5.32990000283462,
+    "llm_s": 0.9912146999995457,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 3.0,
+    "note": "append supported; pop not in sources",
+    "answer": "To add an item to the end of a list, use the `append()` method.  \nTo remove an item by its index, use the `pop(index)` method.  \n\nBoth operations are shown in the list methods section of the source.  \n[1]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.532,
+        "text": "17    CHAPTER 4 \u2013 LISTS AND TUPLES   Python lists are containers to store a set of values of any data type.           LIST INDEXING   A list can be indexed just"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.3739,
+        "text": "directly or imported to another file.  THE GLOBAL KEYWORD   \u2018global\u2019 keyword is used to modify the variable outside of the current scope.  ENUMERATE FUNCTION IN"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 19",
+        "score": 0.3058,
+        "text": "18    a = (1, 7, 2)  \u2022 a.count (1): a count (1) will return number of times 1 occurs in a.  \u2022 a.index (1) will return the index of first occurrence of 1 in a."
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 28",
+        "score": 0.3024,
+        "text": "print(item)  else:      print(\"done\") # this is printed when the loop exhausts!  Output:  1  7  8  done      THE BREAK STATEMENT   \u2018break\u2019 is used to come out o"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 22",
+        "score": 0.2993,
+        "text": "21    If you are a programming beginner without much knowledge of mathematical  operations on sets, you can simply look at sets in python as data types containi"
+      }
+    ]
+  },
+  {
+    "q": "How do I add an item to the end of a list and remove an item by its index?",
+    "mode": "hybrid",
+    "retrieval_ms": 8.663199998409254,
+    "llm_s": 0.7488569999986794,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 3.0,
+    "note": "Append supported; pop not in sources",
+    "answer": "To add an item to the end of a list, use the `append()` method, which appends the element to the list\u2019s end.  \nTo remove an item by its index, use the `pop(index)` method, which deletes the element at the specified index and returns it.  \n\nBoth operations are shown in the list methods section of the source. [1]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.0325,
+        "text": "17    CHAPTER 4 \u2013 LISTS AND TUPLES   Python lists are containers to store a set of values of any data type.           LIST INDEXING   A list can be indexed just"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.0325,
+        "text": "directly or imported to another file.  THE GLOBAL KEYWORD   \u2018global\u2019 keyword is used to modify the variable outside of the current scope.  ENUMERATE FUNCTION IN"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 29",
+        "score": 0.0303,
+        "text": "28    Example:  for i in range (0,80):      print(i)     # this will print 0,1,2 and 3      if i==3          break  THE CONTINUE STATEMENT   \u2018continue\u2019 is used "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 28",
+        "score": 0.0295,
+        "text": "print(item)  else:      print(\"done\") # this is printed when the loop exhausts!  Output:  1  7  8  done      THE BREAK STATEMENT   \u2018break\u2019 is used to come out o"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 22",
+        "score": 0.0295,
+        "text": "21    If you are a programming beginner without much knowledge of mathematical  operations on sets, you can simply look at sets in python as data types containi"
+      }
+    ]
+  },
+  {
+    "q": "What is a tuple and can it be modified after creation?",
+    "mode": "vector",
+    "retrieval_ms": 3.608600000006845,
+    "llm_s": 0.4004783000018506,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 4.0,
+    "groundedness": 3.0,
+    "note": "Answer matches question; immutability claim partly supported by source 5.",
+    "answer": "A tuple is an immutable data type in Python that stores a fixed sequence of values. Once a tuple is created, its contents cannot be changed, added to, or removed from; attempts to modify it will raise an error. This immutability is a defining feature of tuples. [1][2][5]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.4677,
+        "text": "a = () # empty tuple  a = (1,) # tuple with only one element needs a comma  a = (1,7,2) # tuple with more than one element    TUPLE  METHODS   Consider the foll"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.4135,
+        "text": "17    CHAPTER 4 \u2013 LISTS AND TUPLES   Python lists are containers to store a set of values of any data type.           LIST INDEXING   A list can be indexed just"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 50",
+        "score": 0.3911,
+        "text": "49    The syntax of types looks something like this:    from typing import List, Tuple, Dict, Union    # List of integers  numbers: List[int] = [1, 2, 3, 4, 5] "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 41",
+        "score": 0.3382,
+        "text": "40    __ INIT__()  CONSTRUCTOR   __init__() is a special method which is first run as soon as the object is created.  __init__() method is also known as constru"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 20",
+        "score": 0.3145,
+        "text": "19    CHAPTER 4 - PRACTICE  SET   1. Write a program to store seven fruits in a list entered by the user.  2. Write a program to accept marks of 6 students and "
+      }
+    ]
+  },
+  {
+    "q": "What is a tuple and can it be modified after creation?",
+    "mode": "hybrid",
+    "retrieval_ms": 6.77210000139894,
+    "llm_s": 0.3580747000014526,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 4.0,
+    "note": "Answer matches question, mostly supported by sources",
+    "answer": "A tuple is an immutable data type in Python, meaning once it is created its contents cannot be changed. This immutability prevents adding, removing, or altering elements after the tuple has been instantiated. [1][2]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.0315,
+        "text": "17    CHAPTER 4 \u2013 LISTS AND TUPLES   Python lists are containers to store a set of values of any data type.           LIST INDEXING   A list can be indexed just"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 18",
+        "score": 0.0313,
+        "text": "a = () # empty tuple  a = (1,) # tuple with only one element needs a comma  a = (1,7,2) # tuple with more than one element    TUPLE  METHODS   Consider the foll"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 50",
+        "score": 0.0306,
+        "text": "49    The syntax of types looks something like this:    from typing import List, Tuple, Dict, Union    # List of integers  numbers: List[int] = [1, 2, 3, 4, 5] "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 20",
+        "score": 0.0305,
+        "text": "19    CHAPTER 4 - PRACTICE  SET   1. Write a program to store seven fruits in a list entered by the user.  2. Write a program to accept marks of 6 students and "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 23",
+        "score": 0.0292,
+        "text": "22    CHAPTER 5 \u2013 PRACTICE SET   1. Write a program to create a dictionary of Hindi words with values as their English  translation. Provide user with an option"
+      }
+    ]
+  },
+  {
+    "q": "How does exception handling work with try, except and finally?",
+    "mode": "vector",
+    "retrieval_ms": 8.01589999900898,
+    "llm_s": 0.8236384999981965,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer aligns well with source details",
+    "answer": "Exception handling in Python is performed with a `try` block that encloses code that might raise an error, followed by one or more `except` clauses that catch specific exception types (or a generic `except`), and optionally a `finally` clause that runs regardless of whether an exception occurred. The flow is:\n\n1. **`try` block** \u2013 code that may raise an exception is executed.  \n2. **`except` clauses** \u2013 if an exception is raised, Python searches the `except` clauses in order. The first matching clause is executed, and the program continues after the `except` block. If no clause matches, the exception propagates up the call stack.  \n3. **`finally` clause** \u2013 code in a `finally` block is executed no matter what: whether an exception was raised, caught, or the block completed normally. It is typically used for cleanup actions such as closing files or releasing resources.  \n\nThus, the `finally` block guarantees that cleanup code runs even if an error occurs or is caught, ensuring that resources are properly released.  \n\n[1][2]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 51",
+        "score": 0.6353,
+        "text": "print(e)  When the exception is handled, the code flow continues without program interruption.  We can also specify the exception to catch like below:  try:    "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.6334,
+        "text": "51    try:      # Somecode  except:      # Somecode  else:      # Code         # This is executed only if the try was successful    TRY WITH FINALLY   Python of"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 51",
+        "score": 0.4681,
+        "text": "50    dict1 = {'a': 1, 'b': 2}  dict2 = {'b': 3, 'c': 4}  merged = dict1 | dict2  print(merged)  # Output: {'a': 1, 'b': 3, 'c': 4}  You can now use multiple co"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 6",
+        "score": 0.4518,
+        "text": "Raising Exceptions ................................ ................................ ................................ ........................ 50  try with else"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 29",
+        "score": 0.3872,
+        "text": "28    Example:  for i in range (0,80):      print(i)     # this will print 0,1,2 and 3      if i==3          break  THE CONTINUE STATEMENT   \u2018continue\u2019 is used "
+      }
+    ]
+  },
+  {
+    "q": "How does exception handling work with try, except and finally?",
+    "mode": "hybrid",
+    "retrieval_ms": 3.4291999982087873,
+    "llm_s": 0.6279871999977331,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Accurately reflects source content on try/except/finally.",
+    "answer": "Exception handling in Python uses a `try` block to enclose code that might raise an error, an `except` clause to catch and process specific or all exceptions, and an optional `finally` clause that is executed regardless of whether an exception occurred or was caught. The flow is:\n\n1. **`try`** \u2013 The code inside the `try` block is executed.  \n2. **`except`** \u2013 If an exception is raised, Python looks for a matching `except` clause. If found, the code in that clause runs; otherwise the exception propagates upward.  \n3. **`finally`** \u2013 After the `try` (and any matching `except`) finishes, the `finally` block runs whether an exception was raised or not, making it suitable for cleanup actions such as closing files or releasing resources.  \n\nThis structure ensures that cleanup code in `finally` is always executed, even if the `try` block succeeds or an exception is re\u2011raised.  \n\n[1][4]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.0325,
+        "text": "51    try:      # Somecode  except:      # Somecode  else:      # Code         # This is executed only if the try was successful    TRY WITH FINALLY   Python of"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 51",
+        "score": 0.0323,
+        "text": "print(e)  When the exception is handled, the code flow continues without program interruption.  We can also specify the exception to catch like below:  try:    "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 51",
+        "score": 0.032,
+        "text": "50    dict1 = {'a': 1, 'b': 2}  dict2 = {'b': 3, 'c': 4}  merged = dict1 | dict2  print(merged)  # Output: {'a': 1, 'b': 3, 'c': 4}  You can now use multiple co"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 6",
+        "score": 0.0312,
+        "text": "Raising Exceptions ................................ ................................ ................................ ........................ 50  try with else"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 27",
+        "score": 0.0286,
+        "text": "26    CHAPTER 7 \u2013 LOOPS IN PYTHON   Sometimes we want to repeat a set of statements in our program. For instance:  Print 1  to 1000.  Loops make it easy for a p"
+      }
+    ]
+  },
+  {
+    "q": "What does the enumerate function do?",
+    "mode": "vector",
+    "retrieval_ms": 3.3734000026015565,
+    "llm_s": 0.4565489000015077,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer matches question and is supported by source [1]",
+    "answer": "The `enumerate` function in Python adds a counter (index) to an iterable and returns an iterator that yields pairs of the form `(index, item)`, allowing you to loop over both the index and the element simultaneously. [1][2]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.4827,
+        "text": "directly or imported to another file.  THE GLOBAL KEYWORD   \u2018global\u2019 keyword is used to modify the variable outside of the current scope.  ENUMERATE FUNCTION IN"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 6",
+        "score": 0.4711,
+        "text": "enumerate function in python ................................................................ ................................ ........ 51  List comprehensions "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.4655,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.4284,
+        "text": "31    def greet(name):      gr = \"hello\"+ name       return gr                        a = greet (\"harry\")  # a will now contain \"hello harry\"     DEFAULT PAR AM"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.42,
+        "text": "factorial(n) = n x factorial (n-1)  This function can be defined as follows:  def factorial(n)      if i == 0 or i==1: # base condition which doesn\u2019t call the f"
+      }
+    ]
+  },
+  {
+    "q": "What does the enumerate function do?",
+    "mode": "hybrid",
+    "retrieval_ms": 7.658300000912277,
+    "llm_s": 0.311430300000211,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer matches question and is directly supported by source",
+    "answer": "The `enumerate` function adds a counter (index) to each item of an iterable and returns an iterator of `(index, item)` pairs, allowing you to loop over both the index and the value simultaneously. [1]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 52",
+        "score": 0.0328,
+        "text": "directly or imported to another file.  THE GLOBAL KEYWORD   \u2018global\u2019 keyword is used to modify the variable outside of the current scope.  ENUMERATE FUNCTION IN"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 6",
+        "score": 0.0323,
+        "text": "enumerate function in python ................................................................ ................................ ........ 51  List comprehensions "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.0286,
+        "text": "30    CHAPTER 8 \u2013 FUNCT IONS & RECURSIONS   A function is a group of statements performing a specific task.  When a program gets bigger in size and its complexi"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.0284,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 29",
+        "score": 0.0272,
+        "text": "28    Example:  for i in range (0,80):      print(i)     # this will print 0,1,2 and 3      if i==3          break  THE CONTINUE STATEMENT   \u2018continue\u2019 is used "
+      }
+    ]
+  },
+  {
+    "q": "How is a factorial function written using recursion?",
+    "mode": "vector",
+    "retrieval_ms": 3.241800000978401,
+    "llm_s": 0.5698651000020618,
+    "precision": 1.0,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Accurate recursive factorial from source",
+    "answer": "A factorial function written with recursion can be defined as follows:\n\n```python\ndef factorial(n):\n    if n == 0 or n == 1:          # base case \u2013 stops the recursion\n        return 1\n    else:\n        return n * factorial(n-1) # recursive call\n```\n\nThis definition follows the recursive formula\u202ffactorial(n)\u202f=\u202fn\u202f\u00d7\u202ffactorial(n\u20111) and stops when\u202fn\u202freaches\u202f0 or\u202f1, returning\u202f1. [1]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.7184,
+        "text": "factorial(n) = n x factorial (n-1)  This function can be defined as follows:  def factorial(n)      if i == 0 or i==1: # base condition which doesn\u2019t call the f"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.6429,
+        "text": "31    def greet(name):      gr = \"hello\"+ name       return gr                        a = greet (\"harry\")  # a will now contain \"hello harry\"     DEFAULT PAR AM"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 33",
+        "score": 0.5698,
+        "text": "32    This works as follows:                                                              The programmer needs to be extremely careful while working with recurs"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.49,
+        "text": "30    CHAPTER 8 \u2013 FUNCT IONS & RECURSIONS   A function is a group of statements performing a specific task.  When a program gets bigger in size and its complexi"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 4",
+        "score": 0.4861,
+        "text": "Chapter 8 \u2013 Functions & Recursions ................................ ................................................................ .. 30  Example and syntax o"
+      }
+    ]
+  },
+  {
+    "q": "How is a factorial function written using recursion?",
+    "mode": "hybrid",
+    "retrieval_ms": 7.288100001460407,
+    "llm_s": 0.3534016999983578,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Accurate recursive factorial, matches source 1",
+    "answer": "A factorial function written using recursion calls itself with a smaller argument until it reaches the base case (0 or 1). In Python it can be written as:\n\n```python\ndef factorial(n):\n    if n == 0 or n == 1:          # base condition\n        return 1\n    else:\n        return n * factorial(n-1) # recursive call\n```\n\nThis definition follows the mathematical recurrence\u202ffactorial(n)\u202f=\u202fn\u202f\u00d7\u202ffactorial(n\u20111) and stops when\u202fn\u202fis 0 or 1. [1][2]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.0325,
+        "text": "factorial(n) = n x factorial (n-1)  This function can be defined as follows:  def factorial(n)      if i == 0 or i==1: # base condition which doesn\u2019t call the f"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.0325,
+        "text": "31    def greet(name):      gr = \"hello\"+ name       return gr                        a = greet (\"harry\")  # a will now contain \"hello harry\"     DEFAULT PAR AM"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 33",
+        "score": 0.0317,
+        "text": "32    This works as follows:                                                              The programmer needs to be extremely careful while working with recurs"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 34",
+        "score": 0.0299,
+        "text": "33    CHAPTER 8 \u2013 PRACTICE SET   1. Write a program using functions to find greatest of three numbers.  2. Write a python program using function to convert Cels"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 30",
+        "score": 0.0296,
+        "text": "29    CHAPTER 7 \u2013 PRACTICE SET   1. Write a program to print multiplication table of a given number using for loop.  2. Write a program to greet all the person "
+      }
+    ]
+  },
+  {
+    "q": "How does inheritance work and what does super() do?",
+    "mode": "vector",
+    "retrieval_ms": 3.182500000548316,
+    "llm_s": 0.8289886000020488,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer matches question and is fully supported by sources",
+    "answer": "Inheritance in Python allows a new class (the child or derived class) to acquire the attributes and methods of an existing class (the parent or base class). The child can use, override, or extend the inherited members, enabling code reuse and polymorphism. Types of inheritance include single, multiple, and multilevel inheritance, where a child may inherit from one, more than one, or from a chain of classes respectively\u30103\u3011\u30101\u3011.  \n\nThe `super()` function is used inside a derived class to access methods of its superclass. It typically calls the superclass\u2019s constructor (`super().__init__()`) or other methods, allowing the derived class to extend or modify base-class behavior while still invoking the original implementation\u30101\u3011.",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 44",
+        "score": 0.6429,
+        "text": "43    MULTI PLE INHERITANCE   Multiple Inheritance occurs when the child class inherits from more than one parent  classes.     MULTI LEVEL INHERITANCE   When a"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 5",
+        "score": 0.576,
+        "text": "Multiple Inheritance ................................ ................................ ................................ ...................... 43  Multilevel In"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 43",
+        "score": 0.4892,
+        "text": "42    CHA PTER 11 - INHERITANCE  & MORE ON OOPS   Inheritance is a way of creating a new class from an existing class.  Syntax:  class Employee:  # Base class  "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 5",
+        "score": 0.379,
+        "text": "__init__() constructor ................................ ................................ ................................ ..................... 40  Chapter 10 \u2013"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 41",
+        "score": 0.362,
+        "text": "40    __ INIT__()  CONSTRUCTOR   __init__() is a special method which is first run as soon as the object is created.  __init__() method is also known as constru"
+      }
+    ]
+  },
+  {
+    "q": "How does inheritance work and what does super() do?",
+    "mode": "hybrid",
+    "retrieval_ms": 4.426100000273436,
+    "llm_s": 0.363973999999871,
+    "precision": 0.8,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Accurate, well\u2011sourced explanation of inheritance and super()",
+    "answer": "Inheritance in Python allows a new class (the *derived* or *child* class) to reuse, extend, or modify the attributes and methods of an existing class (the *base* or *parent* class). The child class can inherit from one parent (single inheritance), more than one parent (multiple inheritance), or from a chain of parents (multilevel inheritance) [3][1].  \n\nWhen a child class inherits from a parent, it automatically gains access to the parent\u2019s methods and attributes, and it can override or add its own implementations.  \n\nThe `super()` function is used inside a derived class to call a method from its immediate parent class. It is commonly used to invoke the parent\u2019s constructor (`super().__init__()`) so that the base class is properly initialized before the child class adds its own initialization logic. `super()` provides a way to access the superclass\u2019s methods without explicitly naming the parent class, which is especially useful in multiple inheritance scenarios [1].",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 44",
+        "score": 0.0328,
+        "text": "43    MULTI PLE INHERITANCE   Multiple Inheritance occurs when the child class inherits from more than one parent  classes.     MULTI LEVEL INHERITANCE   When a"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 5",
+        "score": 0.0323,
+        "text": "Multiple Inheritance ................................ ................................ ................................ ...................... 43  Multilevel In"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 43",
+        "score": 0.0317,
+        "text": "42    CHA PTER 11 - INHERITANCE  & MORE ON OOPS   Inheritance is a way of creating a new class from an existing class.  Syntax:  class Employee:  # Base class  "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 5",
+        "score": 0.0306,
+        "text": "__init__() constructor ................................ ................................ ................................ ..................... 40  Chapter 10 \u2013"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 40",
+        "score": 0.0287,
+        "text": "from an object.  harry.getSalary() # here self is harry   # equivalent to Employee.getSalary(harry)  The function getSalary() is defined as:  class Employee:   "
+      }
+    ]
+  },
+  {
+    "q": "What is a lambda function in Python?",
+    "mode": "vector",
+    "retrieval_ms": 3.031599997484591,
+    "llm_s": 0.5108169999984966,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer directly defines lambda and cites source [3]",
+    "answer": "A lambda function in Python is an anonymous, one\u2011line function created using the `lambda` keyword. It follows the syntax `lambda arguments: expression`, where the expression is evaluated and returned when the lambda is called. For example, `square = lambda x: x*x` defines a lambda that returns the square of its argument. [3]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 55",
+        "score": 0.627,
+        "text": "Filter creates a list of items for which the function returns true.  list(filter(function))                # the function can be lambda function  Reduce applies"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.5927,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 54",
+        "score": 0.5395,
+        "text": "containing the output of \u2018pip freeze\u2019.  We can distribute this file to other users, and they can recreate the same environment  using:  pip install \u2013r requireme"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.53,
+        "text": "30    CHAPTER 8 \u2013 FUNCT IONS & RECURSIONS   A function is a group of statements performing a specific task.  When a program gets bigger in size and its complexi"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.4999,
+        "text": "31    def greet(name):      gr = \"hello\"+ name       return gr                        a = greet (\"harry\")  # a will now contain \"hello harry\"     DEFAULT PAR AM"
+      }
+    ]
+  },
+  {
+    "q": "What is a lambda function in Python?",
+    "mode": "hybrid",
+    "retrieval_ms": 3.13339999775053,
+    "llm_s": 0.33098180000160937,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 5.0,
+    "note": "Answer directly defines lambda and cites source",
+    "answer": "A lambda function in Python is an anonymous, inline function created using the `lambda` keyword. It follows the syntax `lambda arguments: expression`, where the expression is evaluated and returned when the lambda is called. Lambda functions can be used wherever a normal function is expected, such as in `filter`, `map`, or `reduce` calls, and they are often defined as one\u2011line expressions like `square = lambda x: x*x` or `sum = lambda a,b,c: a+b+c`\u30102\u3011.",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 55",
+        "score": 0.0325,
+        "text": "Filter creates a list of items for which the function returns true.  list(filter(function))                # the function can be lambda function  Reduce applies"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 54",
+        "score": 0.0323,
+        "text": "containing the output of \u2018pip freeze\u2019.  We can distribute this file to other users, and they can recreate the same environment  using:  pip install \u2013r requireme"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.0312,
+        "text": "30    CHAPTER 8 \u2013 FUNCT IONS & RECURSIONS   A function is a group of statements performing a specific task.  When a program gets bigger in size and its complexi"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 32",
+        "score": 0.0299,
+        "text": "31    def greet(name):      gr = \"hello\"+ name       return gr                        a = greet (\"harry\")  # a will now contain \"hello harry\"     DEFAULT PAR AM"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.0298,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      }
+    ]
+  },
+  {
+    "q": "What are decorators in Python?",
+    "mode": "vector",
+    "retrieval_ms": 2.4725000002945308,
+    "llm_s": 0.39170949999970617,
+    "precision": 0.4,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 5.0,
+    "groundedness": 3.0,
+    "note": "General definition not directly in sources, but uses decorator examples.",
+    "answer": "Decorators in Python are special functions or classes that modify the behavior of other functions, methods, or classes. They are applied using the `@decorator_name` syntax placed above the definition of the target function or method, allowing you to wrap or extend its functionality without changing its code directly. This mechanism is commonly used for tasks such as logging, access control, caching, or converting instance methods into class or static methods. [1]",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 45",
+        "score": 0.6191,
+        "text": "44    CLASS METHOD   A class method is a method which is bound to the class and not the object of the class.  @classmethod decorator is used to create a class m"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 41",
+        "score": 0.5337,
+        "text": "40    __ INIT__()  CONSTRUCTOR   __init__() is a special method which is first run as soon as the object is created.  __init__() method is also known as constru"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 5",
+        "score": 0.4612,
+        "text": "Newly added features in python ................................ ................................................................ ..... 48  Walrus Operator ....."
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 40",
+        "score": 0.4567,
+        "text": "from an object.  harry.getSalary() # here self is harry   # equivalent to Employee.getSalary(harry)  The function getSalary() is defined as:  class Employee:   "
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.4512,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      }
+    ]
+  },
+  {
+    "q": "What are decorators in Python?",
+    "mode": "hybrid",
+    "retrieval_ms": 4.985899999155663,
+    "llm_s": 1.4339040999984718,
+    "precision": 0.2,
+    "kw_coverage": 1.0,
+    "top1_hit": true,
+    "relevance": 4.0,
+    "groundedness": 4.0,
+    "note": "Answer matches question and uses source examples, minor inference.",
+    "answer": "Decorators in Python are special functions or methods that modify the behavior of other functions, methods, or classes. They are applied using the `@decorator_name` syntax placed above the definition of the target function or method. Common built\u2011in decorators include `@classmethod`, `@property`, and the setter form `@name.setter`, which change how a method is bound or accessed within a class [1].",
+    "chunks": [
+      {
+        "source": "Python.pdf",
+        "label": "p. 45",
+        "score": 0.0309,
+        "text": "44    CLASS METHOD   A class method is a method which is bound to the class and not the object of the class.  @classmethod decorator is used to create a class m"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 45",
+        "score": 0.0308,
+        "text": "@name.setter  def name (self,value):      self.ename = value  OPER ATOR OVERLOADI NG IN PYTHON   Operators in Python can be overloaded using dunder methods.  Th"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 31",
+        "score": 0.0295,
+        "text": "The part containing the exact set of instructions which are executed during the function  call.  Quick Quiz:  Write a program to greet a user with \u201cGood day\u201d us"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 8",
+        "score": 0.0292,
+        "text": "Some examples of built in modules are os, random etc.  Some examples of external modules are tensorflow, flask etc.  USING PYTHON AS A CALCULATOR   We can use p"
+      },
+      {
+        "source": "Python.pdf",
+        "label": "p. 8",
+        "score": 0.0278,
+        "text": "7    CHAPTER 1 \u2013 MODULES, COMMENTS & PIP   Let\u2019s write our very first python program. Create a file called hello.py and paste the  below code in it.  print(\"hel"
+      }
+    ]
+  }
+]
