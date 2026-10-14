@@ -98,3 +98,7 @@ chats and artifacts; original uploaded binaries are not stored there (extracted 
   (384 per chunk), which made ingesting a 124-chunk PDF take 12.8 s of writes. As bytes, the write takes 0.6 s and reads
   take 0.1 s (measured), with negligible precision loss (~3e-8). Similarity search never runs in Firestore, so nothing is lost.
 - **Sources ingest on upload / Enter**, without a separate "Add" click, so a dropped file can't be silently left un-ingested.
+- **Embedding tuned for a 512 MB instance.** fastembed's defaults (batch 256, one ONNX thread per host core, memory
+  arena on) peaked at 2.3 GB while embedding a ~500-chunk document, and Render OOM-killed the free instance. With batch 8,
+  1 thread and the arena off, the whole app peaks at 365 MB for the same document (measured). The free plan only has
+  0.1 CPU, so extra threads never helped there. `MALLOC_ARENA_MAX=2` in the Dockerfile limits glibc heap fragmentation.

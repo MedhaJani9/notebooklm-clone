@@ -4,7 +4,7 @@ A NotebookLM-style research assistant. Create multiple notebooks, add PDF / PPTX
 sources using **Retrieval-Augmented Generation with citations**, and generate a **report** and a **quiz with answer key**
 (downloadable `.md`). Built with Gradio, ChromaDB, BM25, fastembed, Groq (LangChain) and Firestore.
 
-- **Live app:** `<paste your Render URL>`
+- **Live app:** https://notebooklm-clone-0jfs.onrender.com/ (free tier: first load after idle takes ~1 min)
 - **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · **RAG evaluation:** [docs/RAG_EVALUATION.md](docs/RAG_EVALUATION.md)
 
 ## Features
@@ -66,7 +66,7 @@ The in-memory vector index is rebuilt from stored chunks after a restart.
 
 **Limitations:** Render's filesystem is ephemeral, so deploy with `STORAGE_BACKEND=firestore` for persistence. Firestore stores chunks, chats and
 artifacts but not the original uploaded binaries (the extracted text is kept in chunks). Scanned/image-only PDFs have no text layer and are rejected with a message.
-The free Render instance sleeps when idle (first request is slow) and has 512 MB RAM; use the Starter plan if it runs out of memory.
+The free Render instance sleeps when idle (first request takes ~1 min) and has 512 MB RAM and 0.1 CPU: the app peaks at ~365 MB while ingesting a 200-page PDF, and embedding on 0.1 CPU is slow (large files can take a minute or more).
 Groq's free tier is rate-limited; the app retries with back-off and shows a friendly message.
 
 ## Deploy (Render + Firestore + GitHub Actions)

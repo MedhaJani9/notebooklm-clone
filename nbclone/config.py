@@ -9,6 +9,8 @@ DATA_DIR = os.getenv("DATA_DIR", "data")
 STORAGE_BACKEND = os.getenv("STORAGE_BACKEND", "local").lower()  # "local" | "firestore"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+EMBED_BATCH = int(os.getenv("EMBED_BATCH", "8"))  # small batches keep peak RAM under 512 MB
+EMBED_THREADS = int(os.getenv("EMBED_THREADS", "1"))
 
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "800"))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "100"))
