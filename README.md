@@ -75,7 +75,7 @@ Groq's free tier is rate-limited; the app retries with back-off and shows a frie
    IAM → Service Accounts → create one with role **Cloud Datastore User** → Keys → create JSON key. Collapse the JSON to one line.
 2. **Render:** New → *Blueprint* (or Web Service → Docker) from this repo (`render.yaml` is included). Set env vars `GROQ_API_KEY` and
    `GOOGLE_CREDENTIALS_JSON`. Auto-Deploy is **off** (GitHub Actions deploys). Settings → *Deploy Hook* → copy the URL.
-3. **GitHub:** repo → Settings → Secrets and variables → Actions → add `RENDER_DEPLOY_HOOK_URL` (the hook URL) and `APP_URL` (your `https://….onrender.com`).
+3. **GitHub:** repo → Settings → Secrets and variables → Actions → add the secret `RENDER_DEPLOY_HOOK_URL` (the hook URL). Put your public `https://….onrender.com` URL in `APP_URL` in `.github/workflows/deploy.yml` (it is not a secret).
 4. `git push origin main` → Actions runs `pytest`, then triggers the Render deploy and waits for the app to answer.
 
 No secrets are committed: `.env` and key files are git-ignored; keys live in GitHub Secrets and Render env vars.

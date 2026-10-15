@@ -34,12 +34,9 @@ jobs:
 
       - name: Wait for the live app to respond
         env:
-          APP_URL: ${{ secrets.APP_URL }}
+          APP_URL: https://notebooklm-clone-0jfs.onrender.com/  # public URL, not a secret
         run: |
-          # strip whitespace, newlines and quotes that sneak in when pasting the secret
-          APP_URL=$(printf '%s' "$APP_URL" | tr -d "[:space:]\"'")
-          if [ -z "$APP_URL" ]; then echo "APP_URL secret not set, skipping health check"; exit 0; fi
-          case "$APP_URL" in http://*|https://*) ;; *) echo "APP_URL must start with https://"; exit 1;; esac
+          echo "Checking $APP_URL"
           sleep 60
           curl -fsS --retry 20 --retry-delay 15 --retry-all-errors -o /dev/null "$APP_URL"
           echo "App is up at $APP_URL"
