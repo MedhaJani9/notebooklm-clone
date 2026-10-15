@@ -36,7 +36,10 @@ jobs:
         env:
           APP_URL: ${{ secrets.APP_URL }}
         run: |
+          # strip whitespace, newlines and quotes that sneak in when pasting the secret
+          APP_URL=$(printf '%s' "$APP_URL" | tr -d "[:space:]\"'")
           if [ -z "$APP_URL" ]; then echo "APP_URL secret not set, skipping health check"; exit 0; fi
+          case "$APP_URL" in http://*|https://*) ;; *) echo "APP_URL must start with https://"; exit 1;; esac
           sleep 60
           curl -fsS --retry 20 --retry-delay 15 --retry-all-errors -o /dev/null "$APP_URL"
           echo "App is up at $APP_URL"
